@@ -12,6 +12,7 @@
 		14CF08F21F0D3219002D0AC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CF08F01F0D3219002D0AC2 /* Main.storyboard */; };
 		14CF08F41F0D3219002D0AC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CF08F31F0D3219002D0AC2 /* Assets.xcassets */; };
 		14CF08F71F0D3219002D0AC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CF08F51F0D3219002D0AC2 /* LaunchScreen.storyboard */; };
+		E16D0A57F8CB87A083FB5F5F /* Pods_swiftMorse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1648E49F263E59DFFAA8D78E /* Pods_swiftMorse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		14CF08F31F0D3219002D0AC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14CF08F61F0D3219002D0AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14CF08F81F0D3219002D0AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1648E49F263E59DFFAA8D78E /* Pods_swiftMorse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftMorse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D212BADF6BE607D29EC7CF5 /* Pods-swiftMorse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftMorse.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftMorse/Pods-swiftMorse.release.xcconfig"; sourceTree = "<group>"; };
+		E58224005FA508300F06306C /* Pods-swiftMorse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftMorse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftMorse/Pods-swiftMorse.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16D0A57F8CB87A083FB5F5F /* Pods_swiftMorse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				14CF08EB1F0D3219002D0AC2 /* swiftMorse */,
 				14CF08EA1F0D3219002D0AC2 /* Products */,
+				69BD2C8140A5CCA101E60EB4 /* Pods */,
+				7958B4054C901E2AF727F084 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = swiftMorse;
 			sourceTree = "<group>";
 		};
+		69BD2C8140A5CCA101E60EB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E58224005FA508300F06306C /* Pods-swiftMorse.debug.xcconfig */,
+				3D212BADF6BE607D29EC7CF5 /* Pods-swiftMorse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7958B4054C901E2AF727F084 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1648E49F263E59DFFAA8D78E /* Pods_swiftMorse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14CF08FB1F0D3219002D0AC2 /* Build configuration list for PBXNativeTarget "swiftMorse" */;
 			buildPhases = (
+				5259182895990391329135EC /* [CP] Check Pods Manifest.lock */,
 				14CF08E51F0D3219002D0AC2 /* Sources */,
 				14CF08E61F0D3219002D0AC2 /* Frameworks */,
 				14CF08E71F0D3219002D0AC2 /* Resources */,
+				5ADA5AD0BF3DA4F9EC030481 /* [CP] Embed Pods Frameworks */,
+				6C4F9AF92B94F3AB61425098 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5259182895990391329135EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5ADA5AD0BF3DA4F9EC030481 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftMorse/Pods-swiftMorse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C4F9AF92B94F3AB61425098 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftMorse/Pods-swiftMorse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14CF08E51F0D3219002D0AC2 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		14CF08FC1F0D3219002D0AC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E58224005FA508300F06306C /* Pods-swiftMorse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G9ZJ787Q67;
@@ -272,6 +348,7 @@
 		};
 		14CF08FD1F0D3219002D0AC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D212BADF6BE607D29EC7CF5 /* Pods-swiftMorse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G9ZJ787Q67;
